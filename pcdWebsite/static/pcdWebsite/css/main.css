@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Eczar:wght@400&display=swap');
+
+/* Style the navigation bar */
+.navbar {
+  width: 100%;
+  background-color: #F5F0EA;
+  overflow: auto;
+}
+
+/* Navbar links */
+.navbar a {
+  float: left;
+  text-align: center;
+  padding: 12px;
+  color: white;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.title{
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    font-family: 'Eczar', serif;
+    text-transform: uppercase;
+    margin-top: 200px;
+}
+
+.upload{
+    text-align: center;
+}
+
+body{
+    background-color: #ADB7AF;
+}
+
+.custom-file-upload {
+    margin-left: 50px;
+    border: 1px solid #ccc;
+    display: inline-block;
+    padding: 6px 12px;
+    cursor: pointer;
+    background-color: #F5F0EA;
+    font-family: 'Eczar', serif;
+    text-transform: uppercase;
+    margin-right: 20px;
+}
+
+input[type=file]::-webkit-file-upload-button {
+    margin-left: 50px;
+    display:none;
+}
+
+.scanBtn{
+    color: white;
+    background-color: #C4A299;
+    text-transform: uppercase;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-size: 20px;
+    border: none;
+    transition: 0.3s ease-in;
+}
+
+.scanBtn:hover{
+    color:#C4A299;
+    background-color: white;
+    transition: 0.3s ease-in;
+}
+
+.after-scan{
+    text-align: center;
+    margin-top: 50px;
+}
+
+.result-test{
+    font-family: 'Eczar', serif;
+    text-transform: uppercase;
+}
+
+.before-testing{
+    margin-top: 20px;
+    text-align: center;
+}
+
+.btn-homepage{
+    text-decoration: none;
+    color: black;
+    transition: 0.5s ease-in;
+}
+
+.btn-homepage:hover{
+    word-spacing: 5px;
+    transition: 0.5s ease-in;
+    color: rgb(228, 67, 67);
+    text-decoration: solid;
+}
+
+@media screen and (max-width: 500px) {
+  .navbar a {
+    float: none;
+    display: block;
+  }
+}
