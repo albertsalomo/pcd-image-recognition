@@ -10,6 +10,7 @@
     {% include "navbar.php" %}
     <div class="container">
         <!--Image Upload-->
+        <a href="{% url 'scan' %}">Gelo</a>
         <div class="title">
             <h2>Please Upload Your File Here</h2>
         </div>

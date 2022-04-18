@@ -22,5 +22,6 @@ from django.conf.urls.static import static #add this
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',view.home,name='home'),
+    path('scan',view.scan,name='scan'),
     path('upload',view.upload,name='upload')
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

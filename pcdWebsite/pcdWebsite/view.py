@@ -34,6 +34,9 @@ def upload(request):
 def home(request):
     return render(request,"home.php")
 
+def scan(request):
+    return render(request,"scan.php")
+
 def result(imgPath):
     class_label = ["Covid 19", "Normal", "Pneumonia"]
     model =  pk.load(open('cxr_model2.h5', 'rb'))
