@@ -19,7 +19,7 @@ def upload(request):
         ## Labeling 
         class_label = ["Covid-19", "Normal", "Pneumonia"]
         ## Model Deployment
-        model =  tf.keras.models.load_model('cxr_model.h5')
+        model =  tf.keras.models.load_model('cxr_model2.h5')
         ## Dir image
         dir_image = os.path.join(MEDIA_ROOT, file)
         img = cv2.imread(dir_image)
@@ -36,7 +36,7 @@ def home(request):
 
 def result(imgPath):
     class_label = ["Covid 19", "Normal", "Pneumonia"]
-    model =  pk.load(open('cxr_model.h5', 'rb'))
+    model =  pk.load(open('cxr_model2.h5', 'rb'))
     img = cv2.imread(imgPath)
     img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
     img = cv2.resize(img, (128, 128))
