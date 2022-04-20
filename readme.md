@@ -6,5 +6,8 @@
   <ul>
     <li>opencv</li>
     <li>django</li>
+    <li>pickle</li>
+    <li>numpy</li>
+    <li>tensorflow</li>
   </ul>  
 </p>
