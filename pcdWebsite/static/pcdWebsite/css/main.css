@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Eczar:wght@400&display=swap');
 
+* {
+    font-family: 'Eczar', serif;
+}
+
 /* Style the navigation bar */
 .navbar {
   width: 100%;
@@ -10,7 +14,6 @@
 /* Navbar links */
 .navbar a {
   float: left;
-  text-align: center;
   padding: 12px;
   color: white;
   text-decoration: none;
@@ -26,12 +29,16 @@
     margin-top: 200px;
 }
 
+.body-scan{
+    background-color: #adb7af;
+}
+
 .upload{
     text-align: center;
 }
 
-body{
-    background-color: #ADB7AF;
+.homepage{
+    background-color: #F5F0EA;
 }
 
 .custom-file-upload {
@@ -76,8 +83,10 @@ input[type=file]::-webkit-file-upload-button {
 }
 
 .result-test{
-    font-family: 'Eczar', serif;
     text-transform: uppercase;
+    padding: 20px;
+    font-size: 2rem;
+    font-weight: bolder;
 }
 
 .before-testing{
@@ -86,15 +95,17 @@ input[type=file]::-webkit-file-upload-button {
 }
 
 .btn-homepage{
+    font-size: 1.5rem;
     text-decoration: none;
-    color: black;
+    color: white;
     transition: 0.5s ease-in;
+    padding: 20px;
 }
 
 .btn-homepage:hover{
-    word-spacing: 5px;
+    letter-spacing: 3px;
     transition: 0.5s ease-in;
-    color: rgb(228, 67, 67);
+    color: #6B6361;
     text-decoration: solid;
 }
 
@@ -103,4 +114,17 @@ input[type=file]::-webkit-file-upload-button {
     float: none;
     display: block;
   }
+}
+
+.logo {
+    width: 25%;
+}
+
+.scan-now{
+    border-radius: 50px;
+}
+
+.scan-now:hover{
+    background-color: #F5F0EA;
+    color: #613E3C;
 }
