@@ -28,8 +28,8 @@ def upload(request):
         img = np.array(img)
         img = img.reshape(1, 128, 128, 3)
         predict = class_label[np.argmax(model.predict(img))]
-        return render(request, 'home.php', {'file_url': file_url, 'result' : predict})
-    return render(request, 'home.php')
+        return render(request, 'scan.php', {'file_url': file_url, 'result' : predict})
+    return render(request, 'scan.php')
 
 def home(request):
     return render(request,"home.php")
@@ -37,6 +37,12 @@ def home(request):
 def scan(request):
     return render(request,"scan.php")
 
+def aboutus(request):
+    return render(request, "aboutus.php")
+
+def content(request):
+    return render(request, "content.php")
+    
 def result(imgPath):
     class_label = ["Covid 19", "Normal", "Pneumonia"]
     model =  pk.load(open('cxr_model2.h5', 'rb'))
