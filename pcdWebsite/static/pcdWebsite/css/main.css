@@ -1,8 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Eczar:wght@400&display=swap');
 
+
+:root{
+    
+}
+
 * {
     font-family: 'Eczar', serif;
 }
+
 
 /* Style the navigation bar */
 .navbar {
