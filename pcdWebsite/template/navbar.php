@@ -5,14 +5,15 @@
     </a>
 </div> -->
 
-<nav class="navbar navbar-expand-lg navbar-light" id="navbar">
-    <div class="container-fluid d-flex">
-        {% load static %}
-        <a target="_self" href="/"><img class="logo" src="{% static 'pcdWebsite/images/logo_transparent.png' %}"></a>
-        <button id="navbar-button" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+<header>
+    <nav class="navbar navbar-expand-lg navbar-light" id="navbar">
+        <div class="container-fluid d-flex">
+            {% load static %}
+            <a target="_self" href="/"><img class="logo" src="{% static 'pcdWebsite/images/logo_transparent.png' %}"></a>
+            <button id="navbar-button" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
                         {% load static %}
@@ -29,6 +30,7 @@
                         </div>
                     </li> -->
                 </ul>
+            </div>
         </div>
-    </div>
-</nav>
+    </nav>
+</header>
