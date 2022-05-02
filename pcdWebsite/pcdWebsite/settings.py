@@ -55,7 +55,7 @@ ROOT_URLCONF = 'pcdWebsite.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join('template')],
+        'DIRS': ['template'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

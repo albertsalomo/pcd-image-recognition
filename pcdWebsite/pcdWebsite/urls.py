@@ -21,9 +21,9 @@ from django.conf.urls.static import static  # add this
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', view.home, name='home'),
-    path('upload', view.upload, name='upload'),
-    path('scan', view.scan, name='scan'),
-    path('aboutus', view.aboutus, name='aboutus'),
-    path('content', view.content, name='content')
-] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+    path('',view.home,name='home'),
+    path('scan',view.scan,name='scan'),
+    path('upload',view.upload,name='upload'),
+    path('aboutus',view.aboutus,name='aboutus'),
+    path('content',view.content,name='content')
+]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
