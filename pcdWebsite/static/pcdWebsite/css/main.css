@@ -1,106 +1,110 @@
 @import url('https://fonts.googleapis.com/css2?family=Eczar:wght@400&display=swap');
 
+html{
+    --color-1: #F5F0EA;
+    --color-2: #ADB7AF;
+    --color-3: #666874;
+    --color-4: #6B6361;
+    --color-5: #C4A299;
+    --color-6: #613E3C;
+    --color-7: #B1B2A2;
+}
 
-:root{
-    
+html[data-theme="light"]{
+    --color-1: #F5F0EA;
+    --color-2: #ADB7AF;
+    --color-3: #666874;
+    --color-4: #6B6361;
+    --color-5: #C4A299;
+    --color-6: #613E3C;
+    --color-7: #B1B2A2;
+}
+
+html[data-theme="dark"]{
+    --color-1: #F5F0EA;
+    --color-2: #324041;
+    --color-3: #B18E72;
+    --color-4: #45595A;
+    --color-5: #B1B2A2;
+    --color-6: #613E3C;
+    --color-7: #6B6361;
 }
 
 * {
     font-family: 'Eczar', serif;
 }
 
-
-/* Style the navigation bar */
-.navbar {
-  width: 100%;
-  background-color: #F5F0EA;
-  overflow: auto;
+header{
+    background-color: var(--color-1);
 }
 
-/* Navbar links */
-.navbar a {
-  float: left;
-  padding: 12px;
-  color: white;
-  text-decoration: none;
-  font-size: 17px;
-}
-
-.title{
+.title {
     color: white;
     font-size: 20px;
     text-align: center;
     font-family: 'Eczar', serif;
     text-transform: uppercase;
-    margin-top: 200px;
 }
 
-.body-scan{
-    background-color: #adb7af;
+.desc-p{
+    font-size: 3vw;
 }
 
-.upload{
-    text-align: center;
+.body-scan {
+    background-color: var(--color-2);
 }
 
-.homepage{
-    background-color: #F5F0EA;
+.homepage {
+    background-color: var(--color-1);
+}
+
+a.no-style{
+    color: inherit;
+    text-decoration: none;
 }
 
 .custom-file-upload {
-    margin-left: 50px;
-    border: 1px solid #ccc;
-    display: inline-block;
-    padding: 6px 12px;
+    border: none;
+    padding: 0.5rem;
     cursor: pointer;
-    background-color: #F5F0EA;
+    background-color: var(--color-1);
     font-family: 'Eczar', serif;
     text-transform: uppercase;
-    margin-right: 20px;
 }
 
-input[type=file]::-webkit-file-upload-button {
-    margin-left: 50px;
-    display:none;
-}
-
-.scanBtn{
+.scanBtn {
     color: white;
-    background-color: #C4A299;
+    background-color: var(--color-5);
     text-transform: uppercase;
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    font-size: 20px;
+    padding: 0.5rem;
     border: none;
     transition: 0.3s ease-in;
 }
 
-.scanBtn:hover{
-    color:#C4A299;
+.scanBtn:hover {
+    color:var(--color-5);
     background-color: white;
     transition: 0.3s ease-in;
 }
 
-.after-scan{
+.after-scan {
     text-align: center;
     margin-top: 50px;
 }
 
-.result-test{
+.result-test {
     text-transform: uppercase;
     padding: 20px;
     font-size: 2rem;
     font-weight: bolder;
 }
 
-.before-testing{
+.before-testing {
     margin-top: 20px;
     text-align: center;
 }
 
-.btn-homepage{
+.btn-homepage {
     font-size: 1.5rem;
     text-decoration: none;
     color: white;
@@ -108,29 +112,78 @@ input[type=file]::-webkit-file-upload-button {
     padding: 20px;
 }
 
-.btn-homepage:hover{
+.btn-homepage:hover {
     letter-spacing: 3px;
     transition: 0.5s ease-in;
-    color: #6B6361;
+    color: var(--color-4);
     text-decoration: solid;
 }
 
-@media screen and (max-width: 500px) {
-  .navbar a {
-    float: none;
+button.header-nav{
+    outline: none;
+    background-color: inherit;
+    border: none;
+}
+
+button.header-nav:hover, button.header-nav:focus{
+    text-decoration: underline;
+}
+
+button.no-style{
+    outline: none;
+    border: none;
+}
+
+button.style-1{
+    background-color: var(--color-5);
+    color: var(--color-1);
+}
+
+.scan-now {
+    border-radius: 50px;
+}
+
+.scan-now:hover {
+    background-color: var(--color-1);
+    color: var(--color-6);
+}
+
+.normal-nav {
+    display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .normal-nav{
     display: block;
   }
 }
 
-.logo {
-    width: 25%;
+.hide-nav {
+    animation-name: hide-nav-anim;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
 }
 
-.scan-now{
-    border-radius: 50px;
+.show-nav {
+    animation-name: show-nav-anim;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
 }
 
-.scan-now:hover{
-    background-color: #F5F0EA;
-    color: #613E3C;
+@keyframes show-nav-anim {
+    from{
+        max-height: 0px;
+    }
+    to{
+        max-height: 400px;
+    }
+}
+
+@keyframes hide-nav-anim {
+    from{
+        max-height: 400px;
+    }
+    to{
+        max-height: 0px;
+    }
 }
