@@ -13,7 +13,7 @@
             <img class="p-4 img-fluid" src="{% static 'pcdWebsite/images/logo_transparent.png' %}">
         </div>
         <div class="container">
-            <p style="text-align: center; font-size: 2em;">Welcome to Caduceus Medical Scan. This website was made specifically
+            <p class="desc-p" style="text-align: center;">Welcome to Caduceus Medical Scan. This website was made specifically
                 for lungs medical scans. This website was made for medical purposes.</p>
         </div>
         <div class="container pt-2">
