@@ -26,7 +26,11 @@ SECRET_KEY = 'django-insecure-jsb@ihsy44=7@(s(9o#r65*#(9q^+2xk*c2&ci9com&wrb&#xv
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["fa6de594f4e390.lhrtunnel.link"]
+
+CSRF_TRUSTED_ORIGINS = ["https://fa6de594f4e390.lhrtunnel.link"]
+
+CORS_ORIGIN_WHITELIST = ["https://fa6de594f4e390.lhrtunnel.link"]
 
 
 # Application definition
@@ -55,7 +59,7 @@ ROOT_URLCONF = 'pcdWebsite.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['template'],
+        'DIRS': [os.path.join('template')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
