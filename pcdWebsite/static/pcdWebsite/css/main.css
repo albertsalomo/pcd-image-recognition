@@ -128,3 +128,7 @@ input[type=file]::-webkit-file-upload-button {
     background-color: #F5F0EA;
     color: #613E3C;
 }
+
+.body {
+    background-color: #F5F0EA;
+}
