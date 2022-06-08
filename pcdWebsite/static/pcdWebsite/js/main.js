@@ -1,5 +1,18 @@
 $(document).ready(function () {
     var showNav = false;
+
+    $.ajax({
+        method: "get",
+        url: "gettheme",
+        dataType: "json"
+    }).done(function (response) {
+        if (response.theme == 'dark') {
+            $("#darkSwitch").prop('checked', true);
+        } else {
+            $("#darkSwitch").prop('checked', false);
+        }
+    })
+
     $("#showHideBtn").on("click", function () {
         if (showNav) {
             $("#navControl").removeClass("show-nav");
@@ -35,5 +48,26 @@ $(document).ready(function () {
 
     $("#chooseFileBtn").on("click", function () {
         $("#file-upload").trigger("click");
+    })
+
+    $("#darkSwitch").on("change", function () {
+        if ($("#darkSwitch").is(':checked')) {
+            $("html").attr("data-theme", "dark");
+
+            $.ajax({
+                method: "get",
+                url: "settheme",
+                data: { "theme": "dark" }
+            });
+
+        } else {
+            $("html").attr("data-theme", "light");
+
+            $.ajax({
+                method: "get",
+                url: "settheme",
+                data: { "theme": "light" }
+            });
+        }
     })
 })

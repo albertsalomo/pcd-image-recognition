@@ -26,11 +26,11 @@ SECRET_KEY = 'django-insecure-jsb@ihsy44=7@(s(9o#r65*#(9q^+2xk*c2&ci9com&wrb&#xv
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["fa6de594f4e390.lhrtunnel.link"]
+ALLOWED_HOSTS = ["f93dbe6b66bba5.lhrtunnel.link", "127.0.0.1"]
 
-CSRF_TRUSTED_ORIGINS = ["https://fa6de594f4e390.lhrtunnel.link"]
+CSRF_TRUSTED_ORIGINS = ["https://f93dbe6b66bba5.lhrtunnel.link"]
 
-CORS_ORIGIN_WHITELIST = ["https://fa6de594f4e390.lhrtunnel.link"]
+CORS_ORIGIN_WHITELIST = ["https://f93dbe6b66bba5.lhrtunnel.link"]
 
 
 # Application definition
