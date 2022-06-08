@@ -2,7 +2,7 @@ import datetime
 from django.shortcuts import render
 import pickle as pk
 import numpy as np
-from django.http import HttpResponse, HttpResponseRedirect
+from django.http import HttpResponse
 from django.shortcuts import render
 from django.core.files.storage import FileSystemStorage
 import cv2
@@ -13,7 +13,6 @@ from pcdWebsite.settings import BASE_DIR, MEDIA_ROOT
 
 
 def upload(request):
-    theme = request.COOKIES['theme']
     if request.method == 'POST' and request.FILES['upload']:
         upload = request.FILES['upload']
         fss = FileSystemStorage()
@@ -31,18 +30,32 @@ def upload(request):
         img = np.array(img)
         img = img.reshape(1, 128, 128, 3)
         predict = class_label[np.argmax(model.predict(img))]
-        return render(request, 'scan.php', {'file_url': file_url, 'result': predict, 'theme': theme})
-    return render(request, 'scan.php', {'theme': theme})
+        if (request.COOKIES.get('theme')):
+            theme = request.COOKIES.get('theme')
+            return render(request, 'scan.php', {'file_url': file_url, 'result': predict, 'theme': theme})
+        else:
+            return render(request, 'scan.php', {'file_url': file_url, 'result': predict})
+    if (request.COOKIES.get('theme')):
+        theme = request.COOKIES.get('theme')
+        return render(request, 'scan.php', {'theme': theme})
+    else:
+        return render(request, 'scan.php')
 
 
 def home(request):
-    theme = request.COOKIES['theme']
-    return render(request, "home.php", {'theme': theme})
+    if (request.COOKIES.get('theme')):
+        theme = request.COOKIES['theme']
+        return render(request, "home.php", {'theme': theme})
+    else:
+        return render(request, "home.php")
 
 
 def scan(request):
-    theme = request.COOKIES['theme']
-    return render(request, "scan.php", {'theme': theme})
+    if (request.COOKIES.get('theme')):
+        theme = request.COOKIES['theme']
+        return render(request, "scan.php", {'theme': theme})
+    else:
+        return render(request, "scan.php")
 
 
 def aboutus(request):
@@ -68,9 +81,13 @@ def settheme(request):
 
 def gettheme(request):
     if request.method == 'GET':
-        theme = request.COOKIES['theme']
-        jsonData = '{"theme": "'+theme+'"}'
-        response = HttpResponse(jsonData)
+        if request.COOKIES.get('theme'):
+            theme = request.COOKIES.get('theme')
+            jsonData = '{"theme": "'+theme+'"}'
+            response = HttpResponse(jsonData)
+        else:
+            jsonData = '{"theme": ""}'
+            response = HttpResponse(jsonData)
         return response
 
 
