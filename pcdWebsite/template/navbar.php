@@ -2,8 +2,18 @@
 <header class="w-100 d-flex flex-wrap color-and-bg-color-1">
     <div class="col-12 col-md-3 d-flex flex-column align-items-md-start align-items-center justify-content-center p-3">
         <a href="{% url 'home' %}" class="no-style">
-            <img src=" {% static 'pcdWebsite/images/caduceus.png' %}" height="75" class="d-md-block d-none">
-            <img src="{% static 'pcdWebsite/images/logo_transparent.png' %}" height="75" class="d-block d-md-none">
+            {% if theme %}
+            {% if theme == "dark" %}
+            <img src=" {% static 'pcdWebsite/images/caduceus_darktheme.png' %}" height="75" class="d-md-block d-none" id="headerImgSmall">
+            <img src="{% static 'pcdWebsite/images/logo_transparent_darktheme.png' %}" height="75" class="d-block d-md-none" id="headerImgBig">
+            {% elif theme == "light" %}
+            <img src=" {% static 'pcdWebsite/images/caduceus.png' %}" height="75" class="d-md-block d-none" id="headerImgSmall">
+            <img src="{% static 'pcdWebsite/images/logo_transparent.png' %}" height="75" class="d-block d-md-none" id="headerImgBig">
+            {% endif %}
+            {% else %}
+            <img src=" {% static 'pcdWebsite/images/caduceus.png' %}" height="75" class="d-md-block d-none" id="headerImgSmall">
+            <img src="{% static 'pcdWebsite/images/logo_transparent.png' %}" height="75" class="d-block d-md-none" id="headerImgBig">
+            {% endif %}
         </a>
     </div>
 
