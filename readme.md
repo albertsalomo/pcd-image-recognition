@@ -15,4 +15,4 @@
 
 <h3>Snapshot</h3>
 
-<p><img src="snapshot_1"></p>
+<p><img src="snapshot_1.png"></p>
