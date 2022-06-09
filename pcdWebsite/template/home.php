@@ -14,7 +14,15 @@
     <div class="p-3">
         <div class="text-center">
             {% load static %}
-            <img class="p-4 img-fluid" src="{% static 'pcdWebsite/images/logo_transparent.png' %}">
+            {% if theme %}
+            {% if theme == "dark" %}
+            <img class="p-4 img-fluid" src="{% static 'pcdWebsite/images/logo_transparent_darktheme.png' %}" id="headerImgBig">
+            {% elif theme == "light" %}
+            <img class="p-4 img-fluid" src="{% static 'pcdWebsite/images/logo_transparent.png' %}" id="headerImgBig">
+            {% endif %}
+            {% else %}
+            <img class="p-4 img-fluid" src="{% static 'pcdWebsite/images/logo_transparent.png' %}" id="headerImgBig">
+            {% endif %}
         </div>
         <div class="container">
             <p class="desc-p" style="text-align: center;">Welcome to Caduceus Medical Scan. This website was made specifically
