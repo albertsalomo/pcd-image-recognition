@@ -13,7 +13,7 @@
   </ul>  
 </p>
 
-<h3>Snapshot</h3>
+<h3>Snapshot:</h3>
 
 <p><img src="snapshot_1.png"></p>
 <p><img src="snapshot_2.png"></p>
