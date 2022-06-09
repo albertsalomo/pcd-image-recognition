@@ -53,7 +53,8 @@ $(document).ready(function () {
     $("#darkSwitch").on("change", function () {
         if ($("#darkSwitch").is(':checked')) {
             $("html").attr("data-theme", "dark");
-
+            $("#headerImgSmall").attr("src", "static/pcdWebsite/images/caduceus_darktheme.png");
+            $("#headerImgBig").attr("src", "static/pcdWebsite/images/logo_transparent_darktheme.png");
             $.ajax({
                 method: "get",
                 url: "settheme",
@@ -62,7 +63,8 @@ $(document).ready(function () {
 
         } else {
             $("html").attr("data-theme", "light");
-
+            $("#headerImgSmall").attr("src", "static/pcdWebsite/images/caduceus.png");
+            $("#headerImgBig").attr("src", "static/pcdWebsite/images/logo_transparent.png");
             $.ajax({
                 method: "get",
                 url: "settheme",
