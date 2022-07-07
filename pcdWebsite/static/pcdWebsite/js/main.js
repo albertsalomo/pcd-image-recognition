@@ -1,6 +1,23 @@
 $(document).ready(function () {
     var showNav = false;
 
+    $('.select-box .select-activate').on('change', function () {
+        if ($(this).is(':checked')) {
+            $(this).parents('.select-box').children('.select-list').removeClass('d-none');
+            $(this).parents('.select-box').children('.select-list').addClass('d-block');
+        }
+        else {
+            $(this).parents('.select-box').children('.select-list').removeClass('d-block');
+            $(this).parents('.select-box').children('.select-list').addClass('d-none');
+        }
+    })
+
+    $('.select-box input[type=radio]').on('change', function () {
+        $(this).parents('.select-box').find('.select-label').text($(this).parent().children('.item-label').text());
+        $(this).parents('.select-box').find('.select-list').removeClass('d-block');
+        $(this).parents('.select-box').find('.select-list').addClass('d-none');
+    });
+
     $.ajax({
         method: "get",
         url: "gettheme",
