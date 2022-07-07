@@ -47,7 +47,7 @@
                             <b>{{ result }}</b>
                         </h1>
                     </div>
-                    <p class="text-center"><a class="text-center w-100 style-1 color-and-bg-color-2 link-1" href="{% url 'home' %}" style="text-decoration: none;">BACK TO HOMEPAGE</a></p>
+                    <p class="text-center"><a class="text-center w-100 style-1 color-and-bg-color-2 link-1" href="{% url 'scan' %}" style="text-decoration: none;">BACK TO HOMEPAGE</a></p>
                 </div>
                 {% else %}
                 <div></div>

@@ -21,7 +21,7 @@ def upload(request):
         # Labeling
         class_label = ["Covid-19", "Normal", "Pneumonia"]
         # Model Deployment
-        model = tf.keras.models.load_model('cxr_model2.h5')
+        model = tf.keras.models.load_model('cxr_model_cnn_fixed.h5')
         # Dir image
         dir_image = os.path.join(MEDIA_ROOT, file)
         img = cv2.imread(dir_image)
