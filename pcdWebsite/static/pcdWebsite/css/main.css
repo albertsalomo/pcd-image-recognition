@@ -194,3 +194,7 @@ html[data-theme="dark"]{
 .slider.round .thumb {
     border-radius: 50%;
 }
+
+.body-html {
+    background-color: #F5F0EA;
+}
