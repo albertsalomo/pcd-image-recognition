@@ -15,13 +15,14 @@ from pcdWebsite.settings import BASE_DIR, MEDIA_ROOT
 def upload(request):
     if request.method == 'POST' and request.FILES['upload']:
         upload = request.FILES['upload']
+        model = request.POST['model']
         fss = FileSystemStorage()
         file = fss.save(upload.name, upload)
         file_url = fss.url(file)
         # Labeling
         class_label = ["Covid-19", "Normal", "Pneumonia"]
         # Model Deployment
-        model = tf.keras.models.load_model('cxr_model2.h5')
+        model = tf.keras.models.load_model(model)
         # Dir image
         dir_image = os.path.join(MEDIA_ROOT, file)
         img = cv2.imread(dir_image)
