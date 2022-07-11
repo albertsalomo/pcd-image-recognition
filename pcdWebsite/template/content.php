@@ -4,7 +4,7 @@
         {% include "header.php" %}
         <title>Content | CMS</title>
     </head>
-    <body class="body">
+    <body class="body-html">
         {% include "navbar.php" %}
         {% load static %}
 
