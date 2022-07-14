@@ -15,8 +15,38 @@
         {% include "navbar.php" %}
         <div class="p-5 flex-grow-1 d-flex align-items-center justify-content-center">
             <form method="post" class="w-100" enctype="multipart/form-data" action="upload" style="max-width: 780px;">
-                <h2 class="mb-4">Please Upload Your File Here</h2>
                 {% csrf_token %}
+                <h2 class="mb-4">Please Select Your ML Model:</h2>
+                <div class="d-flex align-items-center justify-content-center">
+                    <div class="select-box position-relative d-flex w-100 flex-shrink-1" style="max-width: 300px;">
+                        <div class="flex-fill p-2 rounded color-and-bg-color-1">
+                            <label class="p-1 w-100 h-100 d-flex justify-content-between align-items-center">
+                                <div>
+                                    <input type="checkbox" class="select-activate" hidden>
+                                    <span class="select-label">CNN</span>
+                                </div>
+                                <i class="fa fa-caret-down" aria-hidden="true"></i>
+                            </label>
+                        </div>
+                        <div class="select-list position-absolute w-100 d-none color-and-bg-color-1">
+                            <ul class="list-group">
+                                <li class="list-group-item border-0 select-box-item p-0 color-and-bg-color-1">
+                                    <label for="cnn" class="w-100 h-100 p-2">
+                                        <input type="radio" name="model" id="cnn" value="cxr_model_cnn_fixed.h5" checked hidden>
+                                        <label for="cnn" class="item-label">CNN</label>
+                                    </label>
+                                </li>
+                                <li class="list-group-item border-0 select-box-item p-0 color-and-bg-color-1">
+                                    <label for="vgg" class="w-100 h-100 p-2">
+                                        <input type="radio" name="model" id="vgg" value="cxr_model_vgg16.h5" hidden><label for="vgg" class="item-label">VGG 16</label>
+                                    </label>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <h2 class="mb-4">Please Upload Your File Here</h2>
                 <div class="d-flex align-items-center flex-wrap justify-content-center">
                     <div class="col-6 col-md-3 d-flex justify-content-start order-1 order-md-0">
                         <button id="chooseFileBtn" type="button" for="file-upload" class="text-nowrap w-100 color-and-bg-color-1 style-1 me-2">
@@ -31,6 +61,7 @@
                         <button class="w-100 style-1 ms-2 color-and-bg-color-2" type="submit">Scan</button>
                     </div>
                 </div>
+
 
                 <!--See File Uploaded-->
                 {% if file_url %}
