@@ -239,3 +239,42 @@ html[data-theme="dark"]{
     border-radius: 70px;
     text-decoration: none;
 }
+
+
+.content-card{
+    margin-left: 20px;
+}
+
+.custom-nav-link{
+    text-decoration: none;
+    color: var(--color-3);
+    background-color: var(--color-2);
+    padding: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-bottom: 20px;
+    border-radius: 10%;
+}
+
+.custom-nav-link:hover{
+    text-decoration: none;
+    color: var(--color-1);
+}
+
+.card-team-title{
+    margin-left: 100px;
+}
+
+.card-team-subtitle{
+    margin-left: 100px;
+}
+
+.card-team-contribution{
+    margin-left: 100px;
+}
+
+@media only screen and (max-width: 700px) {
+    .card-team-title{
+        margin-top: 20px;
+    }
+}

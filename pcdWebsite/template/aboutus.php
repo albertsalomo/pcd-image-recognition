@@ -10,53 +10,30 @@
     <title>About Us | CMS</title>
 </head>
 
-<body class="body-html">
+<body class="w-100 color-and-bg-color-3">
     {% include "navbar.php" %}
     {% load static %}
 
     <div class="container">
         <h4 class="pt-5" style="text-align: center; padding-bottom: 5%">OUR TEAM</h4>
-
-        <!-- <div class="d-flex justify-content-center card-deck pt-5">
-            <div class="card" style="width: 18rem;">
-                <img class="card-img-top" src="{% static 'pcdWebsite/images/member/Albert_Salomo.png' %}" alt="Card image cap">
-                <div class="card-body">
-                    <p class="card-text" style="text-align: center;">Albert Salomo</p>
-                </div>
-            </div>
-            <div class="card" style="width: 18rem;">
-                <img class="card-img-top" src="{% static 'pcdWebsite/images/member/BaptistaVY.png' %}" alt="Card image cap">
-                <div class="card-body">
-                    <p class="card-text" style="text-align: center;">Baptista Varani Yoenata</p>
-                </div>
-            </div>
-            <div class="card" style="width: 18rem;">
-                <img class="card-img-top" src="{% static 'pcdWebsite/images/member/Jessica_Octaviany.png' %}" alt="Card image cap">
-                <div class="card-body">
-                    <p class="card-text" style="text-align: center;">Jessica Octaviany</p>
-                </div>
-            </div>
-            <div class="card" style="width: 18rem;">
-                <img class="card-img-top" src="{% static 'pcdWebsite/images/member/talangan_oscar.png' %}" alt="Card image cap">
-                <div class="card-body">
-                    <p class="card-text" style="text-align: center;">Oscar Deladas</p>
-                </div>
-            </div>
-        </div> -->
-
-        <div class="card mb-3 rounded-pill border">
+        <div class="card mb-3 rounded-pill border color-and-bg-color-1" id="card-team-1">
             <div class="d-flex align-items-center">
                 <div class="col col-9 d-flex flex-column align-items-center justify-content-center h-100">
-                    <h1>Albert Salomo</h1>
-                    <h3>412019040</h3>
-                    <p>"it's just a beningning."</p>
+                    <h1 class="card-team-title">Albert Salomo</h1>
+                    <h3 class="card-team-subtitle">412019040</h3>
+                    <h5 class="card-team-contribution">Contribution</h5>
+                    <p style="margin-left: 50px; text-align: center;">
+                        Membuat dan mengusulkan ide project, mengerjakan code model dasar machine learning CNN 
+                        lalu membuat dan mengusulkan pengerjaan dasar project kelompok menggunakan website dengan framework 
+                        Django, serta membantu pengembangan desain website.
+                    </p>
                 </div>
                 <div class="col col-3 d-flex justify-content-center p-3" style="text-align: center;">
                     <img class="card-img-top img-fluid rounded-circle" src="{% static 'pcdWebsite/images/member/1x1/Albert_Salomo.png' %}" alt="Card image cap">
                 </div>
             </div>
         </div>
-        <div class="card mb-3 rounded-pill border">
+        <div class="card mb-3 rounded-pill border color-and-bg-color-1">
             <div class="d-flex align-items-center">
                 <div class="col col-3 d-flex justify-content-center p-3" style="text-align: center;">
                     <img class="card-img-top img-fluid rounded-circle" src="{% static 'pcdWebsite/images/member/1x1/BaptistaVY.png' %}" alt="Card image cap">
@@ -68,7 +45,7 @@
                 </div>
             </div>
         </div>
-        <div class="card mb-3 rounded-pill border">
+        <div class="card mb-3 rounded-pill border color-and-bg-color-1">
             <div class="d-flex align-items-center">
                 <div class="col col-9 d-flex flex-column align-items-center justify-content-center h-100">
                     <h1>Jessica Octaviany</h1>
@@ -80,7 +57,7 @@
                 </div>
             </div>
         </div>
-        <div class="card mb-3 rounded-pill border">
+        <div class="card mb-3 rounded-pill border color-and-bg-color-1">
             <div class="d-flex align-items-center">
                 <div class="col col-3 d-flex justify-content-center p-3" style="text-align: center;">
                     <img class="card-img-top img-fluid rounded-circle" src="{% static 'pcdWebsite/images/member/1x1/Oscar_Deladas.png' %}" alt="Card image cap">
@@ -92,62 +69,6 @@
                 </div>
             </div>
         </div>
-
-        <!-- <div class="container">
-            <div class="row">
-                <div class="col" style="text-align: center;">
-                    <h2>Albert Salomo</h2>
-                    <p>Contribution : asd</p>
-                </div>
-                <div class="col-lg d-flex justify-content-center">
-                    <div class="card" style="width: 18rem;">
-                        <img class="card-img-top" src="{% static 'pcdWebsite/images/member/Albert_Salomo.png' %}" alt="Card image cap">
-                        <div class="card-body">
-                            <p class="card-text" style="text-align: center;">Albert Salomo</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="w-100"></div>
-                <div class="col-lg d-flex justify-content-center">
-                    <div class="card" style="width: 18rem;">
-                        <img class="card-img-top" src="{% static 'pcdWebsite/images/member/BaptistaVY.png' %}" alt="Card image cap">
-                        <div class="card-body">
-                            <p class="card-text" style="text-align: center;">Baptista Varani Yoenata</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col" style="text-align: center;">
-                    <h2>Baptista Varani Yoenata</h2>
-                    <p>Contribution : asd</p>
-                </div>
-                <div class="w-100"></div>
-                <div class="col mt-5" style="text-align: left">
-                    <h2>Jessica Octaviany</h2>
-                    <p>Contribution : asd</p>
-                </div>
-                <div class="col-lg d-flex justify-content-center">
-                    <div class="card" style="width: 18rem;">
-                        <img class="card-img-top" src="{% static 'pcdWebsite/images/member/Jessica_Octaviany.png' %}" alt="Card image cap">
-                        <div class="card-body">
-                            <p class="card-text" style="text-align: center;">Jessica Octaviany</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="w-100"></div>
-                <div class="col-lg d-flex justify-content-center">
-                    <div class="card" style="width: 18rem;">
-                        <img class="card-img-top" src="{% static 'pcdWebsite/images/member/Oscar_Deladas.png' %}" alt="Card image cap">
-                        <div class="card-body">
-                            <p class="card-text" style="text-align: center;">Oscar Deladas</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col mt-5 justify-content-left" style="text-align: left;">
-                    <h2>Oscar Deladas</h2>
-                    <p>Contribution : asd</p>
-                </div>
-            </div>
-        </div> -->
 
         <hr class="m-5">
 
