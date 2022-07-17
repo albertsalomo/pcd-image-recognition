@@ -1,7 +1,7 @@
 <h1>Final Project Pengolahan Citra Digital</h1>
   
 <p>
-Caduceus Medical Scan is a project that was made for medical scan purposes. This project was made to scan medical image like CT Scans, MRI, X-Ray, and so on. In this project, the Caduceus Medical Scan is specifically scan for lungs part. The machine will determine it into 3 different type of result. The first one is Covid, the second one is Normal, and the third one is Pneumonia.
+Caduceus Medical Scan is a project that was made for medical scan purposes. This project was made to scan medical image like CT Scans, MRI, X-Ray, and so on. This project is using 2 types of model, CNN-based model and VGG-16 model. In this project, the Caduceus Medical Scan is specifically scan for lungs part. The machine will determine it into 3 different type of result. The first one is Covid, the second one is Normal, and the third one is Pneumonia. 
 
 The dataset, model and also the presentation files can be found at :
 <link>
