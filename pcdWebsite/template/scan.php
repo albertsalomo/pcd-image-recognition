@@ -16,6 +16,7 @@
         <div class="p-5 flex-grow-1 d-flex align-items-center justify-content-center">
             <form method="post" class="w-100" enctype="multipart/form-data" action="upload" style="max-width: 780px;">
                 {% csrf_token %}
+
                 <h2 class="mb-4">Please Select Your ML Model:</h2>
                 <div class="d-flex align-items-center justify-content-center">
                     <div class="select-box position-relative d-flex w-100 flex-shrink-1" style="max-width: 300px;">
@@ -61,7 +62,10 @@
                         <button class="w-100 style-1 ms-2 color-and-bg-color-2" type="submit">Scan</button>
                     </div>
                 </div>
-
+                <br>
+                {% if error %}
+                <h6 class="mb-4 text-center" style="color:var(--color-10)">{{ error }}</h6>
+                {% endif %}
 
                 <!--See File Uploaded-->
                 {% if file_url %}

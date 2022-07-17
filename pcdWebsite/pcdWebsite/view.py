@@ -8,39 +8,66 @@ from django.core.files.storage import FileSystemStorage
 import cv2
 import tensorflow as tf
 import os
-from pathlib import Path
+from pcdWebsite.models import Scan_Result
 from pcdWebsite.settings import BASE_DIR, MEDIA_ROOT
 
 
 def upload(request):
-    if request.method == 'POST' and request.FILES['upload']:
+    if request.method == 'POST' and len(request.FILES) != 0:
         upload = request.FILES['upload']
         model = request.POST['model']
-        fss = FileSystemStorage()
-        file = fss.save(upload.name, upload)
-        file_url = fss.url(file)
-        # Labeling
-        class_label = ["Covid-19", "Normal", "Pneumonia"]
-        # Model Deployment
-        model = tf.keras.models.load_model(model)
-        # Dir image
-        dir_image = os.path.join(MEDIA_ROOT, file)
-        img = cv2.imread(dir_image)
-        img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
-        img = cv2.resize(img, (128, 128))
-        img = np.array(img)
-        img = img.reshape(1, 128, 128, 3)
-        predict = class_label[np.argmax(model.predict(img))]
-        if (request.COOKIES.get('theme')):
-            theme = request.COOKIES.get('theme')
-            return render(request, 'scan.php', {'file_url': file_url, 'result': predict, 'theme': theme})
+
+        if(upload.name.split('.')[-1] in ['jpg', 'jpeg', 'png']):
+            if (model in ['cxr_model_vgg16.h5', 'cxr_model_cnn_fixed.h5']):
+                todayDate = datetime.date.today().strftime('%Y-%m-%d')
+                Scan_Result.objects.create(
+                    img_name='tmp', model=model.split('.')[0], result='tmp', date=todayDate)
+                fss = FileSystemStorage()
+                file = fss.save(upload.name, upload)
+                file_url = fss.url(file)
+                # Labeling
+                class_label = ["Covid-19", "Normal", "Pneumonia"]
+                # Model Deployment
+                model = tf.keras.models.load_model(model)
+                # Dir image
+                dir_image = os.path.join(MEDIA_ROOT, file)
+                img = cv2.imread(dir_image)
+                img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
+                img = cv2.resize(img, (128, 128))
+                img = np.array(img)
+                img = img.reshape(1, 128, 128, 3)
+                predict = class_label[np.argmax(model.predict(img))]
+
+                id = Scan_Result.objects.latest('id').id
+                file_name = 'scan-' + str(id) + '.' + \
+                    upload.name.split('.')[-1]
+                scanResult = Scan_Result.objects.get(id=id)
+                scanResult.img_name = file_name
+                scanResult.result = predict
+                scanResult.save()
+
+                if (request.COOKIES.get('theme')):
+                    theme = request.COOKIES.get('theme')
+                    return render(request, 'scan.php', {'file_url': file_url, 'result': predict, 'theme': theme})
+                else:
+                    return render(request, 'scan.php', {'file_url': file_url, 'result': predict})
+            else:
+                if (request.COOKIES.get('theme')):
+                    theme = request.COOKIES.get('theme')
+                    return render(request, 'scan.php', {'theme': theme, 'error': 'Selected model is invalid'})
+                else:
+                    return render(request, 'scan.php', {'error': 'Selected model is invalid'})
         else:
-            return render(request, 'scan.php', {'file_url': file_url, 'result': predict})
+            if (request.COOKIES.get('theme')):
+                theme = request.COOKIES.get('theme')
+                return render(request, 'scan.php', {'theme': theme, 'error': 'File is not valid'})
+            else:
+                return render(request, 'scan.php', {'error': 'File is not valid'})
     if (request.COOKIES.get('theme')):
         theme = request.COOKIES.get('theme')
-        return render(request, 'scan.php', {'theme': theme})
+        return render(request, 'scan.php', {'theme': theme, 'error': 'There is no uploaded file'})
     else:
-        return render(request, 'scan.php')
+        return render(request, 'scan.php', {'error': 'There is no uploaded file'})
 
 
 def home(request):
@@ -60,11 +87,19 @@ def scan(request):
 
 
 def aboutus(request):
-    return render(request, "aboutus.php")
+    if (request.COOKIES.get('theme')):
+        theme = request.COOKIES['theme']
+        return render(request, "aboutus.php", {'theme': theme})
+    else:
+        return render(request, "aboutus.php")
 
 
 def content(request):
-    return render(request, "content.php")
+    if (request.COOKIES.get('theme')):
+        theme = request.COOKIES['theme']
+        return render(request, "content.php", {'theme': theme})
+    else:
+        return render(request, "content.php")
 
 
 def settheme(request):
