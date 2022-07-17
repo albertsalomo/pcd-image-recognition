@@ -60,11 +60,21 @@ def scan(request):
 
 
 def aboutus(request):
-    return render(request, "aboutus.php")
+    if (request.COOKIES.get('theme')):
+        theme = request.COOKIES['theme']
+        return render(request, "aboutus.php", {'theme': theme})
+    else:
+        return render(request, "aboutus.php")
+    
 
 
 def content(request):
-    return render(request, "content.php")
+    if (request.COOKIES.get('theme')):
+        theme = request.COOKIES['theme']
+        return render(request, "content.php", {'theme': theme})
+    else:
+        return render(request, "content.php")
+    
 
 
 def settheme(request):
