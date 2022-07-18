@@ -31,7 +31,7 @@
                         <div class="custom-nav-link p-2"><a class="custom-nav-link" href="{% url 'history' %}">History</a></div>
                     </li>
                     <li class="list-group-item p-1 border-0 color-and-bg-color-1">
-                        <div class="theme-switch-wrapper p-2">
+                        <div class="theme-switch-wrapper">
                             <label class="theme-switch" for="darkSwitch">
                                 <input type="checkbox" id="darkSwitch" class="dark-mode-switch" />
                                 <div class="slider round">
