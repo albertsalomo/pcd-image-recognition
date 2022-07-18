@@ -15,7 +15,7 @@
     {% load static %}
 
     <div class="container">
-        <h4 style="margin-top: 3rem; text-align: center;">CONTENT</h4>
+        <h4 style="margin-top: 3rem; text-align: center;">ARTICLE</h4>
         <hr>
         <p style="text-align: justify;">
             Severe Acute Respiratory Syndrome Corona virus 2 (SARS-COV-2) also known as COVID-19 has been emerged asa pandemic

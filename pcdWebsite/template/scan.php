@@ -47,7 +47,7 @@
                     </div>
                 </div>
                 <br>
-                <h2 class="mb-4">Please Upload Your File Here</h2>
+                <h2 class="mb-4">Please Upload Your File Here:</h2>
                 <div class="d-flex align-items-center flex-wrap justify-content-center">
                     <div class="col-6 col-md-3 d-flex justify-content-start order-1 order-md-0">
                         <button id="chooseFileBtn" type="button" for="file-upload" class="text-nowrap w-100 color-and-bg-color-1 style-1 me-2">

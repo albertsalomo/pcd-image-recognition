@@ -27,5 +27,7 @@ urlpatterns = [
     path('gettheme', view.gettheme),
     path('scan', view.scan, name='scan'),
     path('aboutus', view.aboutus, name='aboutus'),
-    path('content', view.content, name='content')
+    path('article', view.article, name='article'),
+    path('history', view.history, name='history'),
+    path('deletehist', view.deletehist)
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

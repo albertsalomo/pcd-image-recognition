@@ -2,12 +2,14 @@ import datetime
 from django.shortcuts import render
 import pickle as pk
 import numpy as np
-from django.http import HttpResponse
+from django.http import HttpResponse, JsonResponse
 from django.shortcuts import render
 from django.core.files.storage import FileSystemStorage
 import cv2
 import tensorflow as tf
 import os
+
+from urllib3 import HTTPResponse
 from pcdWebsite.models import Scan_Result
 from pcdWebsite.settings import BASE_DIR, MEDIA_ROOT
 
@@ -22,8 +24,11 @@ def upload(request):
                 todayDate = datetime.date.today().strftime('%Y-%m-%d')
                 Scan_Result.objects.create(
                     img_name='tmp', model=model.split('.')[0], result='tmp', date=todayDate)
+                id = Scan_Result.objects.latest('id').id
+                file_name = 'scan-' + str(id) + '.' + \
+                    upload.name.split('.')[-1]
                 fss = FileSystemStorage()
-                file = fss.save(upload.name, upload)
+                file = fss.save(file_name, upload)
                 file_url = fss.url(file)
                 # Labeling
                 class_label = ["Covid-19", "Normal", "Pneumonia"]
@@ -38,9 +43,6 @@ def upload(request):
                 img = img.reshape(1, 128, 128, 3)
                 predict = class_label[np.argmax(model.predict(img))]
 
-                id = Scan_Result.objects.latest('id').id
-                file_name = 'scan-' + str(id) + '.' + \
-                    upload.name.split('.')[-1]
                 scanResult = Scan_Result.objects.get(id=id)
                 scanResult.img_name = file_name
                 scanResult.result = predict
@@ -94,12 +96,12 @@ def aboutus(request):
         return render(request, "aboutus.php")
 
 
-def content(request):
+def article(request):
     if (request.COOKIES.get('theme')):
         theme = request.COOKIES['theme']
-        return render(request, "content.php", {'theme': theme})
+        return render(request, "article.php", {'theme': theme})
     else:
-        return render(request, "content.php")
+        return render(request, "article.php")
 
 
 def settheme(request):
@@ -127,13 +129,26 @@ def gettheme(request):
         return response
 
 
-def result(imgPath):
-    class_label = ["Covid 19", "Normal", "Pneumonia"]
-    model = pk.load(open('cxr_model2.h5', 'rb'))
-    img = cv2.imread(imgPath)
-    img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
-    img = cv2.resize(img, (128, 128))
-    img = np.array(img)
-    img = img.reshape(1, 128, 128, 3)
-    predict = class_label[np.argmax(model.predict(img))]
-    return predict
+def deletehist(request):
+    if request.method == 'GET':
+        id = request.GET['id']
+        scanResult = Scan_Result.objects.get(id=id)
+        file_path = os.path.join('media', scanResult.img_name)
+        try:
+            if os.path.isfile(file_path) or os.path.islink(file_path):
+                os.unlink(file_path)
+        except Exception as e:
+            print('Failed to delete %s. Reason: %s' % (file_path, e))
+        scanResult.delete()
+        response = list(Scan_Result.objects.all().values())
+
+        return JsonResponse(response, safe=False)
+
+
+def history(request):
+    scanHistory = Scan_Result.objects.all().values()
+    if (request.COOKIES.get('theme')):
+        theme = request.COOKIES['theme']
+        return render(request, "history.php", {'theme': theme, 'history_list': scanHistory})
+    else:
+        return render(request, "history.php", {'history_list': scanHistory})
