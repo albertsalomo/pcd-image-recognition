@@ -224,25 +224,8 @@ html[data-theme="dark"]{
 }
 
 .body-html {
-    background-color: #F5F0EA;
+    background-color: var(--color-1) !important;
 }
-
-.nav-button {
-    background-color: #ADB7AF;
-    color: white;
-    padding: 7px;
-    border-radius: 70px;
-    text-decoration: none;
-}
-
-.nav-button:hover {
-    background-color: #666874;
-    color: #d1d1ca;
-    padding: 7px;
-    border-radius: 70px;
-    text-decoration: none;
-}
-
 
 .content-card{
     margin-left: 20px;
@@ -256,7 +239,7 @@ html[data-theme="dark"]{
     padding-left: 15px;
     padding-right: 15px;
     margin-bottom: 20px;
-    border-radius: 10%;
+    border-radius: 50px;
 }
 
 .custom-nav-link:hover{

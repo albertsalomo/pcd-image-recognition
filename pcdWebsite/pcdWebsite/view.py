@@ -94,8 +94,8 @@ def aboutus(request):
         return render(request, "aboutus.php", {'theme': theme})
     else:
         return render(request, "aboutus.php")
-
-
+        
+        
 def article(request):
     if (request.COOKIES.get('theme')):
         theme = request.COOKIES['theme']
