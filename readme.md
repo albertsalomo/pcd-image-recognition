@@ -10,6 +10,11 @@
   Model: <a href="https://drive.google.com/drive/folders/1SPhkDcL9GvEae5z34266yb4jppGMJeQo?usp=sharing">PCD Website Model</a>
   <br>
   Presentation: <a href="https://docs.google.com/presentation/d/1p1ob4YlDwP9yhwEX9VPEIV4IM7kfrBCS/edit?usp=sharing&ouid=117273436821419590701&rtpof=true&sd=true">Team Presentation</a>
+  
+  <br>
+  Guide:
+  <br>
+  Before you can use this project, download the CNN and VGG16 model inside Google Drive Folder in <b>PCD Website Model</b>'s link. After that, move the model file into pcdWebsite folder in your local repository (after you download or clone this project). Then you can use this project.
 
 This project used : 
   <ul>
@@ -64,5 +69,5 @@ This project used :
 <p>
   <div style="text-align:center"><img src="snapshot_4.jpeg"></div>
   <br>
-  This image is CNN and VGG16 model in term of accuracy.
+  This image is CNN and VGG16 model's comparison in term of accuracy.
 </p>
