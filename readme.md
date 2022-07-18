@@ -8,12 +8,38 @@ The dataset, model and also the presentation files can be found at :
 
 This project used : 
   <ul>
-    <li>opencv</li>
-    <li>django</li>
-    <li>pickle</li>
-    <li>numpy</li>
-    <li>tensorflow</li>
-  </ul>  
+    <li>
+      Python:
+      <ul>
+        <li>opencv</li>
+        <li>django</li>
+        <li>pickle</li>
+        <li>numpy</li>
+        <li>tensorflow</li>
+      </ul>
+    </li>
+    <li>
+    CSS:
+    <ul>
+        <li>Bootstrap 5.1.3</li>
+        <li>Fontawesome 4.7.0</li>
+    </ul>
+    </li>
+    <li>
+    Javascript:
+    <ul>
+        <li>JQuery 3.6.0</li>
+    </ul>
+    </li>
+    <li>
+    Database:
+    <ul>
+        <li>SQLite3</li>
+    </ul>
+    </li>
+  </ul>
+  
+  
 </p>
 
 <h3>Snapshot:</h3>
