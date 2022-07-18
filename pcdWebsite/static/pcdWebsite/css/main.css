@@ -235,10 +235,6 @@ html[data-theme="dark"]{
     text-decoration: none;
     color: var(--color-3);
     background-color: var(--color-2);
-    padding: 10px;
-    padding-left: 15px;
-    padding-right: 15px;
-    margin-bottom: 20px;
     border-radius: 50px;
 }
 

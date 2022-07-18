@@ -21,9 +21,15 @@
         <nav class="d-flex align-items-center justify-content-md-end justify-content-center flex-grow-1 flex-wrap">
             <div id="navControl" class="col-12 overflow-hidden normal-nav">
                 <ul class=" list-group list-group-horizontal-md align-items-center justify-content-md-end justify-content-center">
-                    <li class="list-group-item p-1 border-0 color-and-bg-color-1"><a class="custom-nav-link" href="{% url 'aboutus' %}">About Us</a></li>
-                    <li class="list-group-item p-1 border-0 color-and-bg-color-1"><a class="custom-nav-link" href="{% url 'article' %}">Article</a></li>
-                    <li class="list-group-item p-1 border-0 color-and-bg-color-1"><a class="custom-nav-link" href="{% url 'history' %}">History</a></li>
+                    <li class="list-group-item p-1 border-0 color-and-bg-color-1">
+                        <div class="custom-nav-link p-2"><a class="custom-nav-link" href="{% url 'aboutus' %}">About Us</a></div>
+                    </li>
+                    <li class="list-group-item p-1 border-0 color-and-bg-color-1">
+                        <div class="custom-nav-link p-2"><a class="custom-nav-link" href="{% url 'article' %}">Article</a></div>
+                    </li>
+                    <li class="list-group-item p-1 border-0 color-and-bg-color-1">
+                        <div class="custom-nav-link p-2"><a class="custom-nav-link" href="{% url 'history' %}">History</a></div>
+                    </li>
                     <li class="list-group-item p-1 border-0 color-and-bg-color-1">
                         <div class="theme-switch-wrapper p-2">
                             <label class="theme-switch" for="darkSwitch">
