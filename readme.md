@@ -10,6 +10,8 @@
   Model: <a href="https://drive.google.com/drive/folders/1SPhkDcL9GvEae5z34266yb4jppGMJeQo?usp=sharing">PCD Website Model</a>
   <br>
   Presentation: <a href="https://docs.google.com/presentation/d/1p1ob4YlDwP9yhwEX9VPEIV4IM7kfrBCS/edit?usp=sharing&ouid=117273436821419590701&rtpof=true&sd=true">Team Presentation</a>
+  <br>
+  Paper Refrence: <a href="https://ieeexplore.ieee.org/document/9183278">Deep Learning based Diagnosis Recommendation for COVID-19 using Chest X-Rays Images</a>
   
   <br>
   Guide:
