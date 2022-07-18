@@ -23,6 +23,7 @@ This project used :
     <ul>
         <li>Bootstrap 5.1.3</li>
         <li>Fontawesome 4.7.0</li>
+        <li>Google Font</li>
     </ul>
     </li>
     <li>
