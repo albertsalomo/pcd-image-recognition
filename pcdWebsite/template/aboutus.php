@@ -23,8 +23,8 @@
                     <h3 class="card-team-subtitle">412019040</h3>
                     <h5 class="card-team-contribution">Contribution</h5>
                     <p style="margin-left: 50px; text-align: center;">
-                        Membuat dan mengusulkan ide project, mengerjakan code model dasar machine learning CNN 
-                        lalu membuat dan mengusulkan pengerjaan dasar project kelompok menggunakan website dengan framework 
+                        Membuat dan mengusulkan ide project, mengerjakan code model dasar machine learning CNN, menampilkan
+                        confusion matrix model CNN, membuat dan mengusulkan pengerjaan dasar project kelompok menggunakan website dengan framework
                         Django, serta membantu pengembangan desain website.
                     </p>
                 </div>
@@ -39,18 +39,25 @@
                     <img class="card-img-top img-fluid rounded-circle" src="{% static 'pcdWebsite/images/member/1x1/BaptistaVY.png' %}" alt="Card image cap">
                 </div>
                 <div class="col col-9 d-flex flex-column align-items-center justify-content-center h-100">
-                    <h1>Baptista Varani Yoenata</h1>
-                    <h3>412019019</h3>
-                    <p>"it's just a beningning."</p>
+                    <h1 class="card-team-title">Baptista Varani Yoenata</h1>
+                    <h3 class="card-team-subtitle">412019019</h3>
+                    <h5 class="card-team-contribution">Contribution</h5>
+                    <p style="margin-right: 50px; text-align: center;">
+                        Merancang design website dan membantu pengerjaan pada bagian front-end
+                    </p>
                 </div>
             </div>
         </div>
         <div class="card mb-3 rounded-pill border color-and-bg-color-1">
             <div class="d-flex align-items-center">
                 <div class="col col-9 d-flex flex-column align-items-center justify-content-center h-100">
-                    <h1>Jessica Octaviany</h1>
-                    <h3>412019009</h3>
-                    <p>"it's just a beningning."</p>
+                    <h1 class="card-team-title">Jessica Octaviany</h1>
+                    <h3 class="card-team-subtitle">412019009</h3>
+                    <h5 class="card-team-contribution">Contribution</h5>
+                    <p style="margin-left: 50px; text-align: center;">
+                        Menambahkan dataset, Memodifikasi model CNN untuk meningkatkan akurasi dan menambahkan arsitektur VGG-16, melatih model dan memodifikasi
+                        optimizer vgg-16 untuk meningkatkan akurasi, serta membantu analisa model dan merapihkan code model
+                    </p>
                 </div>
                 <div class="col col-3 d-flex justify-content-center p-3" style="text-align: center;">
                     <img class="card-img-top img-fluid rounded-circle" src="{% static 'pcdWebsite/images/member/1x1/Jessica_Octaviany.png' %}" alt="Card image cap">
@@ -63,9 +70,13 @@
                     <img class="card-img-top img-fluid rounded-circle" src="{% static 'pcdWebsite/images/member/1x1/Oscar_Deladas.png' %}" alt="Card image cap">
                 </div>
                 <div class="col col-9 d-flex flex-column align-items-center justify-content-center h-100">
-                    <h1>Oscar Deladas</h1>
-                    <h3>412019037</h3>
-                    <p>"it's just a beningning."</p>
+                    <h1 class="card-team-title">Baptista Varani Yoenata</h1>
+                    <h3 class="card-team-subtitle">412019019</h3>
+                    <h5 class="card-team-contribution">Contribution</h5>
+                    <p style="margin-right: 50px; text-align: center;">
+                    Memodifikasi front-end dan back-end website serta mengatur agar GitHub kelompok tetap terorganisir. 
+                    Menambah fitur scan history ke dalam website serta menambahkan beberapa validasi ketika ingin melakukan scan.
+                    </p>
                 </div>
             </div>
         </div>
