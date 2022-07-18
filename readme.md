@@ -47,3 +47,8 @@ This project used :
 
 <p><img src="snapshot_1.png"></p>
 <p><img src="snapshot_2.png"></p>
+
+<h3>Model Comparison:</h3>
+
+<p><img src="snapshot_3.png"></p>
+<p><img src="snapshot_4.png"></p>
