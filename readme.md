@@ -53,7 +53,7 @@ This project used :
 <p>
   <div style="text-align:center"><img src="snapshot_3.jpeg"></div>
   <br>
-  This image is CNN and VGG16 model comparison in classification report. There are four category that is being compared. Those are precision, recall, f-1 score and accuracy.
+  This image is CNN and VGG16 model comparison in classification report. There are four category that is being compared. Those are precision, recall, f-1 score and accuracy. Overall, CNN model is more adventageous than VGG16 model.
 </p>
 <br>
 <p>
