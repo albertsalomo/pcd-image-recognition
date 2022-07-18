@@ -51,10 +51,12 @@ This project used :
 <h3>Model Comparison:</h3>
 
 <p>
-<img src="snapshot_3.jpeg">
-This image is CNN and VGG16 model comparison in classification report. There are four category that is being compared. Those are precision, recall, f-1 score and accuracy.
+  <img src="snapshot_3.jpeg" style="text-align:center">
+  <br>
+  This image is CNN and VGG16 model comparison in classification report. There are four category that is being compared. Those are precision, recall, f-1 score and accuracy.
 </p>
 <p>
-<img src="snapshot_4.jpeg">
-This image is CNN and VGG16 model in term of accuracy.
+  <img src="snapshot_4.jpeg" style="text-align:center">
+  <br>
+  This image is CNN and VGG16 model in term of accuracy.
 </p>
