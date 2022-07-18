@@ -5,11 +5,11 @@
 
   The dataset, model and also the presentation files can be found at :
   <br>
-  Dataset: <a href="https://drive.google.com/drive/folders/17h53ogv8hsLgYUe_NExgwIU6jUEq2eEg?usp=sharing">https://drive.google.com/drive/folders/17h53ogv8hsLgYUe_NExgwIU6jUEq2eEg?usp=sharing</a>
+  Dataset: <a href="https://drive.google.com/drive/folders/17h53ogv8hsLgYUe_NExgwIU6jUEq2eEg?usp=sharing">PCD Website Dataset</a>
   <br>
-  Model: <a href="https://drive.google.com/drive/folders/1SPhkDcL9GvEae5z34266yb4jppGMJeQo?usp=sharing">https://drive.google.com/drive/folders/1SPhkDcL9GvEae5z34266yb4jppGMJeQo?usp=sharing</a>
+  Model: <a href="https://drive.google.com/drive/folders/1SPhkDcL9GvEae5z34266yb4jppGMJeQo?usp=sharing">PCD Website Model</a>
   <br>
-  Presentation: <a href="https://docs.google.com/presentation/d/1p1ob4YlDwP9yhwEX9VPEIV4IM7kfrBCS/edit?usp=sharing&ouid=117273436821419590701&rtpof=true&sd=true">https://docs.google.com/presentation/d/1p1ob4YlDwP9yhwEX9VPEIV4IM7kfrBCS/edit?usp=sharing&ouid=117273436821419590701&rtpof=true&sd=true</a>
+  Presentation: <a href="https://docs.google.com/presentation/d/1p1ob4YlDwP9yhwEX9VPEIV4IM7kfrBCS/edit?usp=sharing&ouid=117273436821419590701&rtpof=true&sd=true">Team Presentation</a>
 
 This project used : 
   <ul>
