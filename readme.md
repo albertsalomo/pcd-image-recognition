@@ -6,6 +6,7 @@
   The dataset, model and also the presentation files can be found at :
   <br>
   Dataset: <a href="https://drive.google.com/drive/folders/17h53ogv8hsLgYUe_NExgwIU6jUEq2eEg?usp=sharing">https://drive.google.com/drive/folders/17h53ogv8hsLgYUe_NExgwIU6jUEq2eEg?usp=sharing</a>
+  Model: <a href="https://drive.google.com/drive/folders/1SPhkDcL9GvEae5z34266yb4jppGMJeQo?usp=sharing">https://drive.google.com/drive/folders/1SPhkDcL9GvEae5z34266yb4jppGMJeQo?usp=sharing</a>
 
 This project used : 
   <ul>
