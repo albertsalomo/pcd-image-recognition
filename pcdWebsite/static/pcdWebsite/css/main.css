@@ -10,6 +10,7 @@ html{
     --color-7: #d1d1ca;
     --color-8: #613E3C;
     --color-9: #F5F0EA;
+    --color-10: #fc3636;
 }
 
 html[data-theme="light"]{
@@ -22,6 +23,7 @@ html[data-theme="light"]{
     --color-7: #d1d1ca;
     --color-8: #613E3C;
     --color-9: #F5F0EA;
+    --color-10: #fc3636;
 }
 
 html[data-theme="dark"]{
@@ -34,6 +36,7 @@ html[data-theme="dark"]{
     --color-7: #725c57;
     --color-8: #324041;
     --color-9: #F5F0EA;
+    --color-10: #ff7676;
 }
 
 * {
