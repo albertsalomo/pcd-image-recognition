@@ -1,0 +1,266 @@
+@import url('https://fonts.googleapis.com/css2?family=Eczar:wght@400&display=swap');
+
+html{
+    --color-1: #F5F0EA;
+    --color-2: #ADB7AF;
+    --color-3: #666874;
+    --color-4: #6B6361;
+    --color-5: #C4A299;
+    --color-6: #613E3C;
+    --color-7: #d1d1ca;
+    --color-8: #613E3C;
+    --color-9: #F5F0EA;
+    --color-10: #fc3636;
+}
+
+html[data-theme="light"]{
+    --color-1: #F5F0EA;
+    --color-2: #ADB7AF;
+    --color-3: #666874;
+    --color-4: #6B6361;
+    --color-5: #C4A299;
+    --color-6: #613E3C;
+    --color-7: #d1d1ca;
+    --color-8: #613E3C;
+    --color-9: #F5F0EA;
+    --color-10: #fc3636;
+}
+
+html[data-theme="dark"]{
+    --color-1: #324041;
+    --color-2: #45595A;
+    --color-3: #B1B2A2;
+    --color-4: #613E3C;
+    --color-5: #B18E72;
+    --color-6: #F5F0EA;
+    --color-7: #725c57;
+    --color-8: #324041;
+    --color-9: #F5F0EA;
+    --color-10: #ff7676;
+}
+
+* {
+    font-family: 'Eczar', serif;
+}
+
+.desc-p{
+    font-size: 3vw;
+}
+
+.color-and-bg-color-1 {
+    background-color: var(--color-1) !important;
+    color: var(--color-6) !important;
+}
+
+.color-and-bg-color-2 {
+    background-color: var(--color-5) !important;
+    color: var(--color-6) !important;
+}
+
+.color-and-bg-color-3 {
+    background-color: var(--color-2) !important;
+    color: var(--color-3) !important;
+}
+
+.color-and-bg-color-4 {
+    background-color: var(--color-8) !important;
+    color: var(--color-9) !important;
+}
+
+.style-1 {
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    outline: none;
+    border: none;
+    text-transform: uppercase;
+}
+
+.style-2 {
+    padding: 0.5rem;
+    outline: none;
+    border: none;
+}
+
+.link-1:hover {
+    color: var(--color-6);
+}
+
+.normal-nav {
+    display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .normal-nav{
+    display: block;
+  }
+}
+
+.hide-nav {
+    animation-name: hide-nav-anim;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+.show-nav {
+    animation-name: show-nav-anim;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes show-nav-anim {
+    from{
+        max-height: 0px;
+    }
+    to{
+        max-height: 400px;
+    }
+}
+
+@keyframes hide-nav-anim {
+    from{
+        max-height: 400px;
+    }
+    to{
+        max-height: 0px;
+    }
+}
+
+/* Switch template */
+
+.theme-switch-wrapper {
+    display: flex;
+    align-items: center;
+
+}
+
+.theme-switch {
+    display: inline-block;
+    height: 34px;
+    position: relative;
+    width: 60px;
+}
+
+.theme-switch input {
+    display:none;
+}
+
+.slider {
+    background-color: #ccc;
+    bottom: 0;
+    cursor: pointer;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: .4s;
+}
+
+.slider .thumb .thumb-icon-1 {
+    display: block;
+}
+
+.slider .thumb .thumb-icon-2 {
+    display: none;
+}
+
+.thumb {
+    background-color: #fff;
+    bottom: 4px;
+    content: "";
+    height: 26px;
+    left: 4px;
+    position: absolute;
+    transition: .4s;
+    width: 26px;
+}
+
+.dark-mode-switch:checked + .slider {
+    background-color: #66bb6a;
+}
+
+.dark-mode-switch:checked + .slider .thumb {
+    transform: translateX(26px);
+}
+
+.dark-mode-switch:checked + .slider .thumb .thumb-icon-1 {
+    display: none;
+}
+
+.dark-mode-switch:checked + .slider .thumb .thumb-icon-2 {
+    display: block;
+}
+
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round .thumb {
+    border-radius: 50%;
+}
+
+
+/* +Select box style */
+
+.select-list {
+    bottom: 0;
+    transform: translateY(100%);
+    z-index: 100;
+    max-height: 250px;
+    overflow-y: auto;
+}
+
+.select-box * {
+    cursor: pointer;
+}
+
+.select-box-item *:hover {
+    background-color: var(--color-4);
+}
+
+.card-img-menu {
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+}
+
+.body-html {
+    background-color: var(--color-1) !important;
+}
+
+.content-card{
+    margin-left: 20px;
+}
+
+.custom-nav-link{
+    text-decoration: none;
+    color: var(--color-3);
+    background-color: var(--color-2);
+    padding: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-bottom: 20px;
+    border-radius: 50px;
+}
+
+.custom-nav-link:hover{
+    text-decoration: none;
+    color: var(--color-1);
+}
+
+.card-team-title{
+    margin-left: 100px;
+}
+
+.card-team-subtitle{
+    margin-left: 100px;
+}
+
+.card-team-contribution{
+    margin-left: 100px;
+}
+
+@media only screen and (max-width: 700px) {
+    .card-team-title{
+        margin-top: 20px;
+    }
+}
